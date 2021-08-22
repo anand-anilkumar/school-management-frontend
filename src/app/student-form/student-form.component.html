@@ -1,0 +1,68 @@
+<div class="d-flex flex-fill">
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+            <div class="text-center">
+                <h3>Student Form</h3>
+            </div>
+            <div class="alert alert-success" role="alert" *ngIf="isSubmitted">Student added successfully</div>
+            <div class="alert alert-danger" role="alert" *ngIf="isError">Something went wrong..!</div>
+            <div>
+                <form [formGroup]="studentForm">
+                    <div class="form-group">
+                        <label for="nameInput">Student Name<span class="error"> *</span></label>
+                        <input type="text" class="form-control" id="nameInput" formControlName="name"
+                            placeholder="Enter student name">
+                    </div>
+                    <div class="form-group">
+                        <label for="dateInput">Student Date of Birth<span class="error"> *</span></label>
+                        <input type="date" class="form-control" id="dateInput" formControlName="dob">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputClass">Select Class<span class="error"> *</span></label>
+                        <select id="inputState" class="form-control" formControlName="standard">
+                            <option value="1">I</option>
+                            <option value="2">II</option>
+                            <option value="3">III</option>
+                            <option value="4">IV</option>
+                            <option value="5">V</option>
+                            <option value="6">VI</option>
+                            <option value="7">VII</option>
+                            <option value="8">VIII</option>
+                            <option value="9">IX</option>
+                            <option value="10">X</option>
+                            <option value="11">XI</option>
+                            <option value="12">XII</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputClass">Select Division<span class="error"> *</span></label>
+                        <select id="inputState" class="form-control" formControlName="division">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender<span class="error"> *</span></label>
+                        <div class="form-control">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="Male"
+                                    value="Male" formControlName="gender">
+                                <label class="form-check-label" for="Male">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="Female"
+                                    value="Female" formControlName="gender">
+                                <label class="form-check-label" for="Female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center m-2">
+                        <button class="btn btn-primary" (click)="onStudentSubmit()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

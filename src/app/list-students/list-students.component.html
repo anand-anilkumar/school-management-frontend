@@ -1,0 +1,32 @@
+<div class="d-flex flex-fill">
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+            <div class="text-center">
+                <h3>Student Form</h3>
+            </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Adm No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Class</th>
+                <th scope="col">Class Divison</th>
+                <th scope="col">DOB</th>
+                <th scope="col">Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <th>{{student?.admissionNo}}</th>
+                <td>{{student?.name}}</td>
+                <td>{{student?.standard}}</td>
+                <td>{{student?.division}}</td>
+                <td>{{student?.dob}}</td>
+                <td>{{student?.gender}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
+</div>
